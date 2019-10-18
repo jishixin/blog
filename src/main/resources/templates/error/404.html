@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments :: head(~{::title})">
+    <title>404</title>
+</head>
+<body>
+<!--导航-->
+<nav th:replace="_fragments :: menu(0)" class="ui inverted attached segment m-padded-tb-mini">
+</nav>
+<!--中间内容-->
+<div class="m-container-small m-padded-tb-massive">
+    <div class="ui error message m-padded-tb-massive">
+        <div class="ui container">
+            <h1>页面找不到</h1>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<footer th:replace="_fragments :: footer">
+</footer>
+</body>
+<th:block th:replace="_fragments :: script"></th:block>
+</html>

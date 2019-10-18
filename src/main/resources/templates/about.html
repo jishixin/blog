@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments :: head(~{::title})">
+  <title>分类</title>
+</head>
+<body>
+  <!--导航-->
+  <nav th:replace="_fragments :: menu(5)">
+  </nav>
+  <!--中间内容-->
+  <div class="m-container m-padded-tb-big">
+    <div class="ui container">
+      <div class="ui stackable grid">
+        <div class="eleven wide column">
+          <div class="ui segment">
+            <img src="https://picsum.photos/id/10/800/500" alt="" class="ui rounded image">
+          </div>
+        </div>
+        <div class="five wide column">
+          <div class="ui top attached segment">
+            <div class="ui header">关于我</div>
+          </div>
+          <div class="ui attached segment">
+            <p>吉世新,本人性格开朗、稳重、有活力，待人热情、真诚；工作认真负责，积极主动，能吃苦耐劳，用于承受压力，勇于创新；有很强的组织能力和团队协作精神，具有较强的适应能力；纪律性强，工作积极配合；意志坚强，具有较强的无私奉献精神</p>
+            <p>哈哈哈哈</p>
+          </div>
+          <div class="ui attached segment">
+            <div class="ui orange basic label">编程</div>
+            <div class="ui orange basic label">写作</div>
+            <div class="ui orange basic label">思考</div>
+            <div class="ui orange basic label">运动</div>
+          </div>
+          <div class="ui attached segment">
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">JAVA</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">JAVASCRIPT</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">HTML</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">CSS</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">...</div>
+          </div>
+          <div class="ui bottom attached segment">
+            <a href="#" class="ui github circular icon button" data-content="916070312@qq.com" data-position="bottom center"><i class="github icon"></i></a>
+            <a href="#" class="ui weixin circular icon button" data-content="13125390562" data-position="bottom center"><i class="weixin icon"></i></a>
+            <a href="#" class="ui qq circular icon button" data-content="916070312" data-position="bottom center"><i class="qq icon"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--底部-->
+  <footer th:replace="_fragments :: footer">
+  </footer>
+</body>
+<th:block th:replace="_fragments :: script"></th:block>
+<script>
+  $('.menu.toggle').click(function () {
+    $('.m-item').toggleClass('m-mobile-hide')
+  })
+  $('.qq').popup()
+  $('.weixin').popup()
+  $('.github').popup()
+</script>
+</html>
